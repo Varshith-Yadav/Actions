@@ -1,8 +1,9 @@
-a = 1
-b = 3
+from flask import Flask
+app = Flask(__name__)
 
-def add(x , y):
-    return x + y
+@app.route("/")
+def home():
+    return "Hello from your containerized Flask app!"
 
-print(add(a, b))
-
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
