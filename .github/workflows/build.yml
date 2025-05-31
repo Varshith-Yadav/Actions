@@ -22,4 +22,4 @@ jobs:
 
       - name: build
         run: |
-          python -m app.py
+          python app.py
